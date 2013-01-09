@@ -8,6 +8,21 @@ define([ 'jquery' ], function($) {
 
     manipulateRemoteData : function(url) {
 
+      $.ajax({
+        url: url,
+        type: "GET",
+        data: "json",
+        success: function(data){
+          var people = data.people,
+              arr = [];
+          for(var i=0; i < people.length; i++){
+            arr.push(people[i].name);
+            arr.sort();
+          }
+          //console.info(arr);
+          return arr;
+        }
+      })
     }
   };
 });
