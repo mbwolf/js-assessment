@@ -12,5 +12,5 @@ define(function() {
       // otherwise the function should return the number, or false if no number
       // was provided
     }
-  };
+  }
 });
