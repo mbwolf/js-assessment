@@ -8,12 +8,19 @@ define(function() {
     },
 
     alterObjects : function(constructor, greeting) {
-      // console.info(constructor);
-      // console.info(greeting);
+      console.info(constructor);
+      console.info(greeting);
     },
 
     iterate : function(obj) {
-
+      var result = [];
+      for (var prop in obj) {
+        // Only look at properties inside original object, ignore prototypes
+        if(obj.hasOwnProperty(prop)){
+          result.push(prop + ": " + obj[prop]);
+        }
+      }
+      return result;
     }
   };
 });

@@ -72,13 +72,14 @@ define(function() {
     },
 
     duplicates : function(arr) {
+        var duplicates = [];
         arr.sort();
         for(var i=0; i < arr.length; i++){
             if(arr[i-1] === arr[i] ){
-                arr.splice(arr[i],1);
+                duplicates.push(arr[i]);
             }
         }
-        return arr;
+        return duplicates;
     },
 
     square : function(arr) {
