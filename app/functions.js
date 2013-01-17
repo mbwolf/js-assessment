@@ -29,7 +29,13 @@ define(function() {
     },
 
     useArguments : function() {
+        var result = null;
 
+        for (var i = 0; i < arguments.length; i++) {
+            result += arguments[i];
+        }
+
+        return result;
     },
 
     callIt : function(fn) {
